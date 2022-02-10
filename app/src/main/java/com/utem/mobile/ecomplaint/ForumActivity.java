@@ -21,53 +21,25 @@ import java.util.List;
 
 public class ForumActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-
-    // vars    private ArrayList<Complaint> mNotes = new ArrayList<>();
-    private ForumRecyclerViewAdapter mNoteRecyclerAdapter;
-
+    ArrayList<String> ForumList = new ArrayList<>();
+    ForumRecyclerViewAdapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forum);
-        mRecyclerView = findViewById(R.id.forum);
-
-
-        initRecyclerView();
-
-
-
+        RecyclerView recyclerView = findViewById(R.id.forum);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new ForumRecyclerViewAdapter(this, ForumList);
+        adapter.setClickListener((ForumRecyclerViewAdapter.ItemClickListener) this);
+        recyclerView.setAdapter(adapter);
     }
 
 
+    public void onItemClick(View view, int position) {
+       String num= adapter.getItem(position);
 
 
-    private void initRecyclerView(){
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(linearLayoutManager);
-               new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(mRecyclerView);
-        mNoteRecyclerAdapter = new ForumRecyclerViewAdapter( this);
-        mRecyclerView.setAdapter(mNoteRecyclerAdapter);
     }
-
-    public void onClick(View view) {
-        Intent intent = new Intent(this, ForumDetailActivity.class);
-        startActivity(intent);
-    }
-
-
-    ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
-        @Override
-        public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-            return false;
-        }
-
-        @Override
-        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-
-        }
-
-    };
 }
