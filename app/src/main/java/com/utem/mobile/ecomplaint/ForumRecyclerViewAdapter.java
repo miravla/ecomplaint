@@ -2,6 +2,7 @@ package com.utem.mobile.ecomplaint;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,7 @@ public class ForumRecyclerViewAdapter extends RecyclerView.Adapter<ForumRecycler
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
+        //get data
         //String forum = complaint.get(position);
 
        // holder.id.setText(forum);

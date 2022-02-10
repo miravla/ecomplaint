@@ -39,7 +39,8 @@ public class ForumActivity extends AppCompatActivity {
 
     public void onItemClick(View view, int position) {
        String num= adapter.getItem(position);
-
+        Intent intent=new Intent(ForumActivity.this,ForumDetailActivity.class);
+        startActivity(intent);
 
     }
 }
