@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/ecomplaint-master/app/src/main/res/layout/activity_complain.xml" value="0.1644021739130435" />
+        <entry key="..\:/ecomplaint-master/app/src/main/res/layout/activity_forum.xml" value="0.264" />
+        <entry key="..\:/ecomplaint-master/app/src/main/res/layout/activity_forum_detail.xml" value="0.144" />
+        <entry key="..\:/ecomplaint-master/app/src/main/res/layout/activity_forum_row.xml" value="0.23802083333333332" />
+        <entry key="..\:/ecomplaint-master/app/src/main/res/layout/activity_login.xml" value="0.1644021739130435" />
+        <entry key="..\:/ecomplaint-master/app/src/main/res/layout/activity_main.xml" value="0.1644021739130435" />
+        <entry key="..\:/ecomplaint-master/app/src/main/res/layout/activity_register.xml" value="0.1644021739130435" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
